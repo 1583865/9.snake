@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+		}
+		.row {
+			overflow: hidden;
+		}
+		.grid {
+			float: left;
+			width: 30px;
+			height: 30px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		</style>
+</head>
+<body>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/Map.js"></script>
+	<script type="text/javascript" src="js/Sname.js"></script>
+	<script type="text/javascript" src="js/Food.js"></script>
+	<script type="text/javascript" src="js/Block.js"></script>
+	<script type="text/javascript">
+	//map
+	var map = new Map(20,20,600,600);
+	//蛇的图片
+	var sname_obj = {
+		head_pic: ["img/1.png", "img/2.png", "img/3.png", "img/4.png"],
+		body_pic: ["img/5.png"],
+		tail_pic: ["img/6.png", "img/7.png", "img/8.png", "img/9.png"]
+	}
+
+	//sname
+	var sname = new Sname(sname_obj);
+
+	//food
+	var food = new Food(2,6,"img/food.jpg");
+
+	//block
+	var block = new Block("img/block.png");
+
+	//初试化游戏
+	var g = new Game(map,sname,food,block);
+
+
+	
+	</script>
+</body>
+</html>
